@@ -6,6 +6,7 @@ Make sure to add fans=ncv and SPLITNCV_fans="*:GAUGE" to server config
 
 Add this to graphs.cfg:
 
+```
 [fans]
         FNPATTERN ^fans.(.*).rrd
         TITLE Fan Speed
@@ -16,3 +17,4 @@ Add this to graphs.cfg:
         GPRINT:p@RRDIDX@:MAX: \: %5.1lf (max)
         GPRINT:p@RRDIDX@:MIN: \: %5.1lf (min)
         GPRINT:p@RRDIDX@:AVERAGE: \: %5.1lf (avg)\n
+```
