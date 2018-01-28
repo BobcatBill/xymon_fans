@@ -2,6 +2,16 @@ FANS.SH
 
 Script used to pull fan information via IPMI and send to Xymon.
 
+Add the following to $XYMONHOME/etc/clientlaunch.cfg
+
+```
+[fans]
+        ENVFILE $XYMONCLIENTHOME/etc/xymonclient.cfg
+        CMD $XYMONCLIENTHOME/ext/fans.sh
+        LOGFILE $XYMONCLIENTLOGS/fans.log
+        INTERVAL 5m
+```
+
 Make sure to add fans=ncv and SPLITNCV_fans="*:GAUGE" to server config
 
 Add this to graphs.cfg:
