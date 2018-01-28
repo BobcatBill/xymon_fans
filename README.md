@@ -2,7 +2,7 @@ FANS.SH
 
 Script used to pull fan information via IPMI and send to Xymon.
 
-Add the following to $XYMONHOME/etc/clientlaunch.cfg
+Add the following to $XYMONCLIENTHOME/etc/clientlaunch.cfg
 
 ```
 [fans]
